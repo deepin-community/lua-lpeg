@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/architecture.mk
+
+ifeq "$(DEB_HOST_ARCH)" "sparc"
+  DEB_BUILD_OPTIONS+= noopt
+else ifeq "$(DEB_HOST_ARCH)" "mips"
+  DEB_BUILD_OPTIONS+= noopt
+else ifeq "$(DEB_HOST_ARCH)" "mipsel"
+  DEB_BUILD_OPTIONS+= noopt
+endif
+export DEB_BUILD_OPTIONS
+
+%:
+	dh $@ --buildsystem=lua --with lua
