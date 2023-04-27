@@ -1,3 +1,18 @@
+lua-lpeg (1.0.2-2deepin1) unstable; urgency=medium
+
+  * Add minimum dh_lua version limit
+
+ -- xiangzelong <xiangzelong@deepin.org>  Thu, 27 Apr 2023 15:11:22 +0800
+
+lua-lpeg (1.0.2-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Detiste ]
+  * Build for Lua5.4 (Closes: #1014563)
+
+ -- Jérémy Lal <kapouer@melix.org>  Wed, 27 Jul 2022 09:31:33 +0200
+
 lua-lpeg (1.0.2-1) unstable; urgency=medium
 
   * Team upload.
