@@ -1,12 +1,14 @@
 Source: lua-lpeg
 Section: interpreters
 Priority: optional
-Maintainer: Enrico Tassi <gareuselesinge@debian.org>
-Build-Depends: dh-lua (>= 28) , debhelper-compat (= 12)
-Standards-Version: 4.5.0
-Homepage: http://www.inf.puc-rio.br/~roberto/lpeg.html
+Maintainer: Debian Lua Team <pkg-lua-devel@lists.alioth.debian.org>
+Uploaders: James McCoy <jamessan@debian.org>
+Build-Depends: dh-lua, debhelper-compat (= 13)
+Standards-Version: 4.7.0
+Homepage: https://www.inf.puc-rio.br/~roberto/lpeg/
 Vcs-Git: https://salsa.debian.org/lua-team/lua-lpeg.git
 Vcs-Browser: https://salsa.debian.org/lua-team/lua-lpeg
+Rules-Requires-Root: no
 
 Package: lua-lpeg
 Architecture: any
@@ -14,6 +16,7 @@ Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Provides: ${lua:Provides}
+Breaks: lua-json (<< 1.3.4-3~)
 XB-Lua-Versions: ${lua:Versions}
 Description: LPeg library for the Lua language
  LPeg is a new pattern-matching library for Lua, based on Parsing Expression
@@ -36,4 +39,3 @@ Description: LPeg development files for the Lua language
  useful to create a statically linked binary (like a C application or a
  standalone Lua interpreter).
  Documentation is also shipped within this package.
-
